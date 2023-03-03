@@ -32,7 +32,7 @@ const Game = () => {
             ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
             ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
             ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
-            ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
+            ['W','O','O','O','O','O','P','O','O','O','O','O','W'],
             ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
             ['W','O','O','O','O','O','O','O','O','O','O','O','W'],
             ['W','O','O','O','O','O','O','O','O','W','O','O','W'],
@@ -46,6 +46,8 @@ const Game = () => {
 
         var wall = 'https://cdnb.artstation.com/p/assets/images/images/035/877/165/large/gregory-ligman-brick-wall-tile.jpg?1616129544';
         var floor = 'https://images.squarespace-cdn.com/content/v1/55fc0004e4b069a519961e2d/1442590746571-RPGKIXWGOO671REUNMCB/image-asset.gif?format=300w';
+        var player = 'https://raw.githubusercontent.com/HansPanzer2137/TedSokoban/master/tedsoc/src/component/static/Bez%20nazwy.png';
+
 
         (document.getElementById("app2137") as HTMLInputElement).innerHTML = "";
 
@@ -54,6 +56,7 @@ const Game = () => {
                 switch (multi[i][j]){
                     case 'W': {buffor = "<img id='nebro' src='"+wall+"' alt='nigga'></img>"; console.log("ściana");break;}
                     case 'O': {buffor = "<img id='nebro' src='"+floor+"' alt='nigga'></img>"; console.log("podłoga");break;}
+                    case 'P': {buffor = "<img id='nebro' src='"+player+"' alt='nigga'></img>"; console.log("podłoga");break;}
                 }
                 mapa = mapa+buffor;
             }
